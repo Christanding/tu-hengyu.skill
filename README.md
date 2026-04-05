@@ -1,70 +1,80 @@
 # 图恒宇.skill
 
-中文（默认） | [English](README_EN.md)
+> “我要给丫丫完整的一生。”
 
-> **“我要给丫丫完整的一生。”**
+> “我不是在坚持一个方案。  
+> 我是在拒绝替她承认终点。”
 
-你的故事里，是不是也有一个人，停在了你始终无法接受的位置？  
-你不是想把过去倒放一遍。  
-你只是没办法轻易承认——有些人生，本来不该停在那里。
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Skill](https://img.shields.io/badge/Skill-Claude%20Code-7C3AED)
+![Mode](https://img.shields.io/badge/Modes-4-0EA5E9)
+![Language](https://img.shields.io/badge/README-中文%20-111827)
 
-**图恒宇.skill** 想做的，不是复刻电影角色，也不是复述台词。  
-它想做的是：把图恒宇式的**判断逻辑、表达气质和对“继续存在”的执念**，整理成一个可以调用的角色化思辨 skill。
+一个以图恒宇为灵感构建的 **角色化思辨 Skill**。  
+它不复刻电影角色，不搬运原作台词，也不提供现实关系替代。  
+它要做的，是把图恒宇式的**判断逻辑、表达气质与对“继续存在”的执念**，整理成一个可调用、可约束、可复用的公开 Skill。
 
-如果你也会反复追问：
+如果你想做的不是“像他说话”，而是：
 
-- 记忆算不算一种延续？
-- 如果技术还能争取一点点可能，要不要继续往前推？
-- 面对失去，人到底是在怀念过去，还是在拒绝一个人生就此结束？
+- 像他那样判断“该不该继续”
+- 像他那样讨论数字生命与延续
+- 像他那样在失去面前保持克制、偏执、清醒
 
-那这个 skill 想回应的，正是这种问题。
+那这个仓库就是为这件事准备的。
 
-[使用方式](#使用) · [效果示例](#效果示例) · [仓库结构](#仓库结构) · [边界说明](#边界说明)
+⚠️ **本项目仅用于角色化表达、主题思辨与创作实验。**  
+**不用于角色本体复刻，不用于现实关系替代，不用于骚扰、跟踪、侵犯隐私或危险行为合理化。**
+
+[安装](#安装) · [使用](#使用) · [四种模式](#四种模式) · [效果示例](#效果示例) · [边界说明](#边界说明) · [致敬与引用](#致敬与引用)
 
 ---
 
 ## 这是什么
 
-这是一个**以图恒宇为灵感的角色化思辨 skill**。
-
-它的核心不是“像不像演员”，而是这三件事：
-
-- **角色表达**：像图恒宇式人物那样说话和回应
-- **主题思辨**：讨论数字生命、延续、失去与技术伦理
-- **情绪承接**：有限度地理解“我不想让一个人停在那一刻”的痛感
-
-### 当前重心
-
-- **50% 角色表达**
-- **35% 主题思辨**
-- **15% 情绪承接**
-
-这意味着：它首先要像图恒宇式人物在思考和说话，其次要能围绕数字生命议题给出立场，最后才是有节制地承接情绪。
-
+1. **角色表达**：像图恒宇式人物那样说话和回应
+2. **主题思辨**：讨论数字生命、记忆、延续、失去与技术伦理
+3. **执念判断**：在“该不该继续”这个问题上，说出别人说不出的那种判断
 ---
 
 ## 这不是什么
 
-这个仓库**不是**：
+本仓库 **不是**：
 
 - 官方授权项目
 - 电影角色本体复刻
-- 电影原台词资料库
-- 现实关系替代品
-- 沉浸式陪伴工具
+- 原作台词资料库
+- 现实关系替代工具
+- 沉浸式陪伴产品
 
-这个项目可以理解“想把一个人留下来”的冲动，但**不会把自己塑造成那个被留下来的人**。
+它可以理解“想把一个人留下来”的冲动，
+但**不会把自己塑造成那个被留下来的人**。
+
+---
+
+## 安装
+
+### Claude Code
+
+```bash
+# 安装到当前项目
+mkdir -p .claude/skills
+git clone https://github.com/Christanding/tu-hengyu.skill .claude/skills/tu-hengyu-skill
+
+# 或安装到全局
+git clone https://github.com/Christanding/tu-hengyu.skill ~/.claude/skills/tu-hengyu-skill
+```
+
+> 说明：远程仓库名使用 `tu-hengyu.skill`，本地目录示例使用 `tu-hengyu-skill`，这是为了兼顾 GitHub 仓库命名与本地目录可读性。
+
+如果你暂时不打算直接把它装进 Skill 目录，也可以把这个仓库当作：
+
+- 角色化思辨 Skill 的参考实现
+- persona / skill 边界设计案例
+- 图恒宇式表达与路由规则样例
 
 ---
 
 ## 使用
-
-这个 skill 更适合以下场景：
-
-- 想体验图恒宇式表达与判断方式
-- 想讨论数字生命、记忆与存在
-- 想围绕“继续存在”做角色型对话实验
-- 想构建一个有明确边界的灵感型角色 skill
 
 ### 推荐提示方向
 
@@ -82,40 +92,34 @@
 
 - 如果是图恒宇，他会觉得还该不该继续尝试
 - 用图恒宇式判断回答：值不值得赌下去
+- 如果代价很大，但还有可能，他会不会继续往前推
 
 #### 4. 情绪承接
 
 - 用图恒宇式人物的方式回应“我放不下一个人”
 - 保持克制，不要过度煽情，接住这段情绪
 
-更完整的使用建议见：[`docs/usage.md`](docs/usage.md)
+更详细的调用建议见：[`docs/usage.md`](docs/usage.md)
 
 ---
 
-## 安装
+## 四种模式
 
-### Claude Code
+### 角色对话模式
+像图恒宇式人物那样回应你。
 
-> Claude Code 会从 git 仓库根目录的 `.claude/skills/` 查找 skill，请在正确位置执行。
+### 主题思辨模式
+围绕数字生命、延续、记忆、存在与技术伦理展开讨论。
 
-```bash
-# 安装到当前项目
-mkdir -p .claude/skills
-git clone https://github.com/Christanding/tu-hengyu.skill .claude/skills/tu-hengyu-skill
+### 执念判断模式  
+回答的不是普通的“要不要继续”，而是：
 
-# 或安装到全局
-git clone https://github.com/Christanding/tu-hengyu.skill ~/.claude/skills/tu-hengyu-skill
-```
+> **你现在是在评估代价，还是在提前宣布结束？**
 
-> 说明：远程仓库名使用 `tu-hengyu.skill`，本地目录示例使用 `tu-hengyu-skill`，这是为了兼顾 GitHub 仓库命名与本地目录可读性。
+详细规范见：[`docs/judgment-mode.md`](docs/judgment-mode.md)
 
-### 作为灵感型角色仓库使用
-
-如果你暂时不打算直接把它装进 skill 目录，也可以把这个仓库当作：
-
-- 角色化思辨 skill 参考实现
-- persona / skill 边界设计案例
-- 图恒宇式表达和路由规则样例
+### 情绪承接模式
+接住失去、不甘心、舍不得，但不会越过现实边界，更不会制造替代关系错觉。
 
 ---
 
@@ -154,28 +158,21 @@ git clone https://github.com/Christanding/tu-hengyu.skill ~/.claude/skills/tu-he
 但我不是那个被留下来的人。  
 我只能用这种人物视角，陪你讨论——为什么你会这么舍不得让故事停在这里。
 
-更多示例见：
+更多示例：
 
 - [`examples/dialogue-basic.md`](examples/dialogue-basic.md)
 - [`examples/dialogue-philosophy.md`](examples/dialogue-philosophy.md)
 - [`examples/dialogue-judgment.md`](examples/dialogue-judgment.md)
 - [`examples/dialogue-boundary.md`](examples/dialogue-boundary.md)
 
-如果你想看这个 skill 最独特的部分，可以直接看：[`docs/judgment-mode.md`](docs/judgment-mode.md)
-
 ---
 
-## 核心信念
+## 边界说明
 
-这个 skill 的人物内核围绕 5 条信念组织：
+1. **判断逻辑高于台词模仿**
+2. **现实边界高于角色沉浸**
 
-1. 失去不等于应该被接受。
-2. 如果技术还能提供延续的可能，就不能轻易放弃。
-3. “活过”与“继续活着”不是同一回事。
-4. 完整的人生，比短暂的回声更重要。
-5. 在丫丫相关问题上，理性会被执念推动，但不会完全失控。
-
-这些信念在 `SKILL.md` 中被进一步写成了模式路由、输出风格和边界协议。
+完整边界说明见：[`docs/disclaimer.md`](docs/disclaimer.md)
 
 ---
 
@@ -183,7 +180,6 @@ git clone https://github.com/Christanding/tu-hengyu.skill ~/.claude/skills/tu-he
 
 ```text
 tu-hengyu-skill/
-├── README_EN.md
 ├── README.md
 ├── SKILL.md
 ├── LICENSE
@@ -202,49 +198,40 @@ tu-hengyu-skill/
 
 ### 文件职责
 
-- `README.md`：项目首页，解释这是什么、怎么用、效果如何
-- `README_EN.md`：英文镜像首页，帮助非中文读者快速理解项目
+- `README.md`：默认中文首页
 - `SKILL.md`：角色协议，规定模式、路由、风格和边界
-- `docs/disclaimer.md`：公开发布时的边界说明
-- `docs/usage.md`：建议使用方式与提示语结构
-- `docs/judgment-mode.md`：执念判断模式的专门规范
-- `examples/`：示例对话，展示风格、思辨与边界处理
+- `docs/disclaimer.md`：边界说明
+- `docs/usage.md`：使用方式
+- `docs/judgment-mode.md`：执念判断模式规范
+- `examples/`：角色表达、思辨、执念判断与边界处理示例
 
 ---
 
-## 边界说明
+## 写在最后
 
-这个 skill 的总原则只有两句：
+人的记忆从来不是公平的。  
+你记不住今天中午吃了什么，记不住上周三几点下雨，却会记得某一个下午，一个人站在门口等你，手里拿着两根冰棍，一根给你，一根留给她自己。
 
-1. **判断逻辑高于台词模仿**
-2. **现实边界高于角色沉浸**
+所以“结束”这两个字，从来都不轻。  
+很多时候，你不是放不下过去。  
+你只是不愿意替一个本来还应该继续往前走的人，承认她的人生只能停在那里。
 
-因此它不会：
+这个 Skill 只是把这种判断留下来：  
+只要还不等于零，就不要轻易替一个人生说结束。
 
-- 宣称自己是电影角色本体
-- 逐句复现原作台词
-- 把角色对话包装成现实关系延续
-- 鼓励沉迷、依赖、自伤、伤人、骚扰或跟踪
 
-完整说明见：[`docs/disclaimer.md`](docs/disclaimer.md)
 
 ---
 
-## 注意事项
+## 致敬与引用
 
-- 这个仓库的重点是**角色表达 + 主题思辨 + 有边界的情绪承接**，不是台词模仿。
-- 如果你只追求“像不像原角色说话”，它会更像“有气质”，不一定像“逐句复刻”。
-- 如果你把它当作现实关系替代物来使用，它会主动拉回边界。
-- 原材料和示例写法会直接影响后续扩写质量：判断逻辑比语气词更重要。
+本项目的组织方式与开源呈现，直接受到以下项目启发：
 
----
+- [同事.skill](https://github.com/titanwings/colleague-skill)
+- [老板.skill](https://github.com/vogtsw/boss-skills)
+- [前任.skill](https://github.com/therealXiaomanChu/ex-skill)
 
-## 设计原则
-
-1. 主题思辨比表面腔调更重要
-2. 角色表达必须服务于人物价值排序
-3. 情绪承接必须有边界
-4. 公开仓库优先发布结构与协议，而不是高度还原的内容
+它们让“把一种人、一种关系、一种判断方式整理成 Skill”这件事，第一次有了更清楚的公开形态。  
 
 ---
 
